@@ -7,6 +7,7 @@
 //
 
 #import "SendView.h"
+#import "Util.h"
 #import "Services.h"
 #import "Constants.h"
 #import "SVProgressHUD.h"
@@ -59,10 +60,10 @@
         [controller.view addSubview:self];
         [controller.view bringSubviewToFront:self];
         
-        CALayer *imageLayer = self.layer;
-        [imageLayer setCornerRadius:20];
-        [imageLayer setMasksToBounds:YES];
-
+        CALayer *selfLayer = self.layer;
+        [selfLayer setCornerRadius:25];
+        [selfLayer setMasksToBounds:YES];
+        
         CALayer *txtLayer = self.txt_value.layer;
         [txtLayer setCornerRadius:20
          
@@ -118,8 +119,10 @@
     
     _imgv_photo.image = contact.img_photo;
     CALayer *imageLayer = _imgv_photo.layer;
-    [imageLayer setCornerRadius:23];
+    [imageLayer setCornerRadius:25];
     [imageLayer setMasksToBounds:YES];
+    
+    [Util circleFilledWithOutline:_imgv_photo fillColor:[UIColor clearColor] outlineColor:kColorBlue];
     
     _txt_value.text = @"";
     _lbl_name.text = contact.name;

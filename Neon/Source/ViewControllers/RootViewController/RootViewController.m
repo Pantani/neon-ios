@@ -75,11 +75,13 @@
 
 - (void) circleFilledWithOutline:(UIView*)circleView fillColor:(UIColor*)fillColor outlineColor:(UIColor*)outlinecolor{
     CAShapeLayer *circleLayer = [CAShapeLayer layer];
-    float width = circleView.frame.size.width+180;
-    float height = circleView.frame.size.height+180;
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    float width = screenRect.size.width-20;
+    float height = width;
     [circleLayer setBounds:CGRectMake(2.0f, 2.0f, width-2.0f, height-2.0f)];
     [circleLayer setPosition:CGPointMake(width/2, height/2)];
-    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(2.0f, 15.0f, width-2.0f, height-2.0f)];
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(2.0f, 22.0f, width-2.0f, height-2.0f)];
     [circleLayer setPath:[path CGPath]];
     [circleLayer setFillColor:fillColor.CGColor];
     [circleLayer setStrokeColor:outlinecolor.CGColor];
@@ -89,7 +91,7 @@
     
     CAShapeLayer *lineLayer = [CAShapeLayer layer];
     UIBezierPath *linePath = [UIBezierPath bezierPath];
-    CGPoint line_start = CGPointMake(circleView.center.x, circleLayer.position.y+circleLayer.frame.size.height/2+14);
+    CGPoint line_start = CGPointMake(circleView.center.x, circleLayer.position.y+circleLayer.frame.size.height/2+21);
     [linePath moveToPoint:line_start];
     CGPoint line_end = CGPointMake(circleView.center.x, _bt_send.center.y-10);
     [linePath addLineToPoint:line_end];

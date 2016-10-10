@@ -23,10 +23,6 @@
                         <action selector="cancel:" destination="iN0-l3-epB" eventType="touchUpInside" id="t1A-hV-hUY"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_avatar.png" id="sAe-Hd-9uD">
-                    <frame key="frameInset" minX="50.00%" minY="13" width="60" height="60"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="avatar.jpg" id="HKf-I7-8ec">
                     <frame key="frameInset" minX="50.00%" minY="18" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -98,7 +94,6 @@
     </objects>
     <resources>
         <image name="avatar.jpg" width="50" height="50"/>
-        <image name="bg_avatar.png" width="124" height="126"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
