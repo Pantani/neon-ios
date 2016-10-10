@@ -33,7 +33,7 @@ static NSString *const kDateFormatter = @"yyyy-MM-dd'T'HH:mm:ss.SSS";
 static NSString *const kDateFormatterCell = @"dd MMM yyyy - HH:mm";
 
 //Constants
-static int const kCharSize = 320;
+static int const kRowSize = 80;
 static NSString *const kCacheSQLPath = @"/Library/neondb.sqlite";
 
 //Localizable Strings

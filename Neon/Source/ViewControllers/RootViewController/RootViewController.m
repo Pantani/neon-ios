@@ -71,6 +71,8 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - UI Methods
+
 - (void) circleFilledWithOutline:(UIView*)circleView fillColor:(UIColor*)fillColor outlineColor:(UIColor*)outlinecolor{
     CAShapeLayer *circleLayer = [CAShapeLayer layer];
     float width = circleView.frame.size.width+210;
