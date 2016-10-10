@@ -120,6 +120,7 @@
              [[[UIAlertView alloc] initWithTitle:@"Atenção" message:@"Erro. Tente novamente mais tarde!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
          }
         [SVProgressHUD dismiss];
+        [_refreshControl endRefreshing];
      }];
 }
 

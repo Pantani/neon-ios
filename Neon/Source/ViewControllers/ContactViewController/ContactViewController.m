@@ -112,6 +112,7 @@
 
 -(void)getContacts{
     _dataSource = [CacheDB listUsers];
+    [_refreshControl endRefreshing];
 }
 
 #pragma mark - Public Methods

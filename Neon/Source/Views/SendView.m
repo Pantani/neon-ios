@@ -163,7 +163,7 @@
         [UIView animateWithDuration:.5f delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             
             _alphaView.alpha = 0.6;
-            self.frame = CGRectMake(5, 84, screenWidth-10, self.frame.size.height);
+            self.frame = CGRectMake(5, 74, screenWidth-10, self.frame.size.height);
             
         } completion:^(BOOL finished) {
             _isAnimating = false;
