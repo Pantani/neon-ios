@@ -370,11 +370,11 @@
 		357C612C1DAB1B5700668045 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				35FD64AF1DAB512A00602771 /* KeyboardToolBar */,
 				353A28511DAB722900E56760 /* Reachability */,
+				357C61301DAB1B5700668045 /* SVProgressHUD */,
 				353A28541DAB722900E56760 /* Util.h */,
 				353A28551DAB722900E56760 /* Util.m */,
-				35FD64AF1DAB512A00602771 /* KeyboardToolBar */,
-				357C61301DAB1B5700668045 /* SVProgressHUD */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
