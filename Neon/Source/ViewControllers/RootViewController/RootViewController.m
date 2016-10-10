@@ -75,8 +75,8 @@
 
 - (void) circleFilledWithOutline:(UIView*)circleView fillColor:(UIColor*)fillColor outlineColor:(UIColor*)outlinecolor{
     CAShapeLayer *circleLayer = [CAShapeLayer layer];
-    float width = circleView.frame.size.width+210;
-    float height = circleView.frame.size.height+210;
+    float width = circleView.frame.size.width+180;
+    float height = circleView.frame.size.height+180;
     [circleLayer setBounds:CGRectMake(2.0f, 2.0f, width-2.0f, height-2.0f)];
     [circleLayer setPosition:CGPointMake(width/2, height/2)];
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(2.0f, 15.0f, width-2.0f, height-2.0f)];

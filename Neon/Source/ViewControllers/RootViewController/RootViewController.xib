@@ -48,25 +48,25 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_avatar.png" id="Eyk-Cf-SA4">
-                    <frame key="frameInset" minX="50.00%" width="153" height="155" maxY="381"/>
+                    <frame key="frameInset" minX="50.00%" width="153" height="155" maxY="342"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ldK-Tb-M8H">
-                    <frame key="frameInset" minX="49.77%" width="158" height="21" maxY="356"/>
+                    <frame key="frameInset" minX="49.77%" width="158" height="21" maxY="317"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b8i-xA-OIe">
-                    <frame key="frameInset" minX="49.70%" width="208" height="21" maxY="328"/>
+                    <frame key="frameInset" minX="49.70%" width="208" height="21" maxY="289"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="img_photo.png" id="zx8-kw-Fei">
-                    <frame key="frameInset" minX="49.78%" width="146" height="146" maxY="386"/>
+                    <frame key="frameInset" minX="49.78%" width="146" height="146" maxY="347"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </imageView>
             </subviews>
