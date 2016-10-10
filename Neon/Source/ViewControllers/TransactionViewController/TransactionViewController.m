@@ -90,9 +90,13 @@
     [imageLayer setCornerRadius:23];
     [imageLayer setMasksToBounds:YES];
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:kDateFormatterCell];
-    cell.lbl_date.text = [formatter stringFromDate:transaction.date];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    
+    NSDateComponents *comp = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute fromDate:transaction.date];
+
+    NSString *dateStr = [NSString stringWithFormat:@"%ld de %@ de %ld - às %ldh%ld",[comp day],[[df monthSymbols] objectAtIndex:([comp month]-1)],[comp year],[comp hour],[comp minute]];
+    
+    cell.lbl_date.text = dateStr;
 
     return cell;
 }
