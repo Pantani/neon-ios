@@ -85,7 +85,7 @@ static DatabaseHandler *_shared = nil;
 
 - (BOOL) open{
 	const char *path = [[self path] cStringUsingEncoding:NSUTF8StringEncoding];
-	NSLog(@"Path Banco:%s",path);
+//	NSLog(@"Path Banco:%s",path);
     
     if ((sqlite3_open(path, &database) == SQLITE_OK)) {
         sqlite3_exec(database, "PRAGMA synchronous=OFF", NULL, NULL, NULL);

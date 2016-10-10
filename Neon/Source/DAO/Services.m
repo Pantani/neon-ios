@@ -147,6 +147,9 @@
                          [transactions addObject:model];
                      }
                      
+                     NSSortDescriptor* sortByDate = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+                     [transactions sortUsingDescriptors:[NSArray arrayWithObject:sortByDate]];
+                     
                      __typeof(transactions) __strong weakResult = transactions;
                      [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                          completionBlock(weakResult,error);

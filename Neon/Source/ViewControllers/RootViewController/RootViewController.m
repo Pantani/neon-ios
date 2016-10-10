@@ -93,7 +93,6 @@
     [linePath moveToPoint:line_start];
     CGPoint line_end = CGPointMake(circleView.center.x, _bt_send.center.y-10);
     [linePath addLineToPoint:line_end];
-    [linePath stroke];
     [lineLayer setPath:[linePath CGPath]];
     [lineLayer setFillColor:fillColor.CGColor];
     [lineLayer setStrokeColor:outlinecolor.CGColor];
