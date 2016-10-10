@@ -8,12 +8,12 @@
 
 #import "TransactionViewController.h"
 #import "TransactionCell.h"
+#import "SVProgressHUD.h"
 #import "Transaction.h"
 #import "Constants.h"
 #import "Services.h"
-#import "SVProgressHUD.h"
+#import "Util.h"
 #import <QuartzCore/QuartzCore.h>
-
 
 @interface TransactionViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -87,8 +87,11 @@
     cell.lbl_tel.text = transaction.contact.tel;
     cell.imgv_photo.image = transaction.contact.img_photo;
     CALayer *imageLayer = cell.imgv_photo.layer;
-    [imageLayer setCornerRadius:23];
+    [imageLayer setCornerRadius:25];
     [imageLayer setMasksToBounds:YES];
+    
+    [Util circleFilledWithOutline:cell.imgv_photo fillColor:[UIColor clearColor] outlineColor:kColorBlue];
+
     
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     

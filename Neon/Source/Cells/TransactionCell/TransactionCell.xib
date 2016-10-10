@@ -12,34 +12,30 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d7O-pi-W9u" id="fK6-TZ-yRq">
-                <frame key="frameInset" width="320" height="79"/>
+                <frame key="frameInset" width="320" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="01 de Janeiro de 1990 - às 00h00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" id="Htx-Ek-eX6">
-                        <frame key="frameInset" minX="94" minY="54" width="218" height="14"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <frame key="frameInset" minX="94" minY="81.82%" height="14" maxX="8"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" id="h8e-F4-z0Z">
-                        <frame key="frameInset" minX="94" minY="9" width="218" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <frame key="frameInset" minX="94" minY="15.25%" height="21" maxX="8"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_avatar.png" id="zd8-DM-HOU">
-                        <frame key="frameInset" minX="25" minY="9" width="60" height="60"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="avatar.jpg" id="Hcx-5N-DlQ">
-                        <frame key="frameInset" minX="30" minY="14" width="50" height="50"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <frame key="frameInset" minX="30" minY="46.67%" width="50" height="50"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="(xx) xxxxx-xxxx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" id="v1M-rK-59g">
-                        <frame key="frameInset" minX="94" minY="32" width="218" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <frame key="frameInset" minX="94" minY="50.79%" height="17" maxX="8"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -61,7 +57,6 @@
     </objects>
     <resources>
         <image name="avatar.jpg" width="50" height="50"/>
-        <image name="bg_avatar.png" width="248" height="252"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

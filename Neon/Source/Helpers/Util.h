@@ -15,4 +15,7 @@
 #pragma mark - Validation
 +(BOOL)verifyConnection;
 
+#pragma mark - UI Methods
++(void) circleFilledWithOutline:(UIView*)circleView fillColor:(UIColor*)fillColor outlineColor:(UIColor*)outlinecolor;
+
 @end

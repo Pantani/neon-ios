@@ -14,6 +14,7 @@
 #import "Services.h"
 #import "Contact.h"
 #import "CacheDB.h"
+#import "Util.h"
 
 @interface ContactViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -97,9 +98,11 @@
     cell.lbl_tel.text = contact.tel;
     cell.imgv_photo.image = contact.img_photo;
     CALayer *imageLayer = cell.imgv_photo.layer;
-    [imageLayer setCornerRadius:23];
+    [imageLayer setCornerRadius:25];
     [imageLayer setMasksToBounds:YES];
     
+    [Util circleFilledWithOutline:cell.imgv_photo fillColor:[UIColor clearColor] outlineColor:kColorBlue];
+
     return cell;
 }
 

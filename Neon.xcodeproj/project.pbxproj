@@ -12,6 +12,8 @@
 		353650041DAA94B100F7024B /* NeonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 353650031DAA94B100F7024B /* NeonTests.m */; };
 		3536500F1DAA94B100F7024B /* NeonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3536500E1DAA94B100F7024B /* NeonUITests.m */; };
 		353651541DAAA9E700F7024B /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 353651531DAAA9E700F7024B /* avatar.jpg */; };
+		353A28561DAB722900E56760 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 353A28531DAB722900E56760 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		353A28571DAB722900E56760 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 353A28551DAB722900E56760 /* Util.m */; };
 		357C61111DAB10DA00668045 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 357C61101DAB10DA00668045 /* Default-568h@2x.png */; };
 		357C61141DAB11F400668045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C61131DAB11F400668045 /* UIKit.framework */; };
 		357C61161DAB128000668045 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 357C61151DAB128000668045 /* Images.xcassets */; };
@@ -28,8 +30,6 @@
 		357C615B1DAB1B5700668045 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C61361DAB1B5700668045 /* SVProgressHUD.m */; };
 		357C615C1DAB1B5700668045 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C61391DAB1B5700668045 /* Contact.m */; };
 		357C615D1DAB1B5700668045 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C613B1DAB1B5700668045 /* Transaction.m */; };
-		357C615E1DAB1B5700668045 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C613E1DAB1B5700668045 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		357C615F1DAB1B5700668045 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C61401DAB1B5700668045 /* Util.m */; };
 		357C61601DAB1B5700668045 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C61441DAB1B5700668045 /* ContactViewController.m */; };
 		357C61611DAB1B5700668045 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357C61451DAB1B5700668045 /* ContactViewController.xib */; };
 		357C61621DAB1B5700668045 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C61481DAB1B5700668045 /* RootViewController.m */; };
@@ -107,6 +107,10 @@
 		3536500E1DAA94B100F7024B /* NeonUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeonUITests.m; sourceTree = "<group>"; };
 		353650101DAA94B100F7024B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		353651531DAAA9E700F7024B /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		353A28521DAB722900E56760 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		353A28531DAB722900E56760 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		353A28541DAB722900E56760 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		353A28551DAB722900E56760 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		357C61101DAB10DA00668045 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		357C61131DAB11F400668045 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		357C61151DAB128000668045 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
@@ -133,10 +137,6 @@
 		357C61391DAB1B5700668045 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		357C613A1DAB1B5700668045 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		357C613B1DAB1B5700668045 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
-		357C613D1DAB1B5700668045 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		357C613E1DAB1B5700668045 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		357C613F1DAB1B5700668045 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
-		357C61401DAB1B5700668045 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		357C61431DAB1B5700668045 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
 		357C61441DAB1B5700668045 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
 		357C61451DAB1B5700668045 /* ContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
@@ -281,6 +281,15 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		353A28511DAB722900E56760 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				353A28521DAB722900E56760 /* Reachability.h */,
+				353A28531DAB722900E56760 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		357C61121DAB11F400668045 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,7 +309,6 @@
 				357C61281DAB1B5700668045 /* Globals */,
 				357C612C1DAB1B5700668045 /* Helpers */,
 				357C61371DAB1B5700668045 /* Models */,
-				357C613C1DAB1B5700668045 /* Util */,
 				357C61411DAB1B5700668045 /* ViewControllers */,
 				357C614E1DAB1B5700668045 /* Views */,
 			);
@@ -362,6 +370,9 @@
 		357C612C1DAB1B5700668045 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				353A28511DAB722900E56760 /* Reachability */,
+				353A28541DAB722900E56760 /* Util.h */,
+				353A28551DAB722900E56760 /* Util.m */,
 				35FD64AF1DAB512A00602771 /* KeyboardToolBar */,
 				357C61301DAB1B5700668045 /* SVProgressHUD */,
 			);
@@ -390,17 +401,6 @@
 				357C613B1DAB1B5700668045 /* Transaction.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		357C613C1DAB1B5700668045 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				357C613D1DAB1B5700668045 /* Reachability.h */,
-				357C613E1DAB1B5700668045 /* Reachability.m */,
-				357C613F1DAB1B5700668045 /* Util.h */,
-				357C61401DAB1B5700668045 /* Util.m */,
-			);
-			path = Util;
 			sourceTree = "<group>";
 		};
 		357C61411DAB1B5700668045 /* ViewControllers */ = {
@@ -620,7 +620,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				35FD64B21DAB512A00602771 /* KeyboardToolBar.m in Sources */,
-				357C615F1DAB1B5700668045 /* Util.m in Sources */,
 				357C61521DAB1B5700668045 /* ContactCell.m in Sources */,
 				35364FEE1DAA94B100F7024B /* AppDelegate.m in Sources */,
 				357C615C1DAB1B5700668045 /* Contact.m in Sources */,
@@ -635,8 +634,9 @@
 				357C61641DAB1B5700668045 /* TransactionViewController.m in Sources */,
 				357C61541DAB1B5700668045 /* TransactionCell.m in Sources */,
 				357C61701DAB222200668045 /* CacheDB.m in Sources */,
-				357C615E1DAB1B5700668045 /* Reachability.m in Sources */,
 				35364FEB1DAA94B100F7024B /* main.m in Sources */,
+				353A28561DAB722900E56760 /* Reachability.m in Sources */,
+				353A28571DAB722900E56760 /* Util.m in Sources */,
 				357C61621DAB1B5700668045 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

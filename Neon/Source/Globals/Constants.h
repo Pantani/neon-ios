@@ -45,6 +45,7 @@ static NSString *const kCacheSQLPath = @"/Library/neondb.sqlite";
 
 //Colors
 #define kColor [UIColor colorWithRed:0/255.0 green:239/255.0 blue:174/255.0 alpha:1]
+#define kColorBlue [UIColor colorWithRed:51/255.0 green:219/255.0 blue:239/255.0 alpha:1]
 
 typedef enum {
     kPMFeedTypeInvalid = 0,
