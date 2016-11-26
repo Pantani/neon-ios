@@ -40,7 +40,7 @@
     _imgv_photo.image = [UIImage imageNamed:@"avatar.jpg"];
     _lbl_name.text = @"";
     _lbl_tel.text = @"";
-    _lbl_date.text = @"";
+    _lbl_value.text = @"";
 }
 
 #pragma mark - Public Methods

@@ -7,10 +7,12 @@
 //
 
 #import "RootViewController.h"
-#import "ContactViewController.h"
 #import "TransactionViewController.h"
-#import "User.h"
+#import "ContactViewController.h"
+#import "UIColor+Additions.h"
 #import "SVProgressHUD.h"
+#import "User.h"
+#import "Util.h"
 
 @interface RootViewController ()
 
@@ -44,7 +46,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self getToken];
 }
 
@@ -53,8 +54,17 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     
+    [Util drawBackgroundView:self.view];
+    
     _lbl_name.text = _name;
     _lbl_email.text = _email;
+    _img_user.image = [UIImage imageNamed:@"img_photo.png"];
+    
+    CALayer *imageLayer = _img_user.layer;
+    [imageLayer setCornerRadius:_img_user.frame.size.width/2];
+    [imageLayer setMasksToBounds:YES];
+    
+    [Util circleGradientFilledWithOutline:_img_user outlineColor:[UIColor neon_greenColor] gradientColor:[UIColor neon_alphaColor]];
     
     CALayer *sendLayer = self.bt_send.layer;
     [sendLayer setCornerRadius:25];
@@ -63,43 +73,10 @@
     CALayer *histLayer = self.bt_hist.layer;
     [histLayer setCornerRadius:25];
     [histLayer setMasksToBounds:YES];
-    
-    [self circleFilledWithOutline:_img_user fillColor:[UIColor clearColor] outlineColor:[UIColor whiteColor]];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-#pragma mark - UI Methods
-
-- (void) circleFilledWithOutline:(UIView*)circleView fillColor:(UIColor*)fillColor outlineColor:(UIColor*)outlinecolor{
-    CAShapeLayer *circleLayer = [CAShapeLayer layer];
-    
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    float width = screenRect.size.width-20;
-    float height = width;
-    [circleLayer setBounds:CGRectMake(2.0f, 2.0f, width-2.0f, height-2.0f)];
-    [circleLayer setPosition:CGPointMake(width/2, height/2)];
-    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(2.0f, 22.0f, width-2.0f, height-2.0f)];
-    [circleLayer setPath:[path CGPath]];
-    [circleLayer setFillColor:fillColor.CGColor];
-    [circleLayer setStrokeColor:outlinecolor.CGColor];
-    [circleLayer setLineWidth:2.0f];
-    [[self.view layer] addSublayer:circleLayer];
-    circleLayer.position = circleView.center;
-    
-    CAShapeLayer *lineLayer = [CAShapeLayer layer];
-    UIBezierPath *linePath = [UIBezierPath bezierPath];
-    CGPoint line_start = CGPointMake(circleView.center.x, circleLayer.position.y+circleLayer.frame.size.height/2+21);
-    [linePath moveToPoint:line_start];
-    CGPoint line_end = CGPointMake(circleView.center.x, _bt_send.center.y-10);
-    [linePath addLineToPoint:line_end];
-    [lineLayer setPath:[linePath CGPath]];
-    [lineLayer setFillColor:fillColor.CGColor];
-    [lineLayer setStrokeColor:outlinecolor.CGColor];
-    [lineLayer setLineWidth:2.0f];
-    [[self.view layer] addSublayer:lineLayer];
 }
 
 #pragma mark - Private Methods

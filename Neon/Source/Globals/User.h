@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "Constants.h"
 
 @interface User : NSObject
@@ -14,6 +15,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *token;
+@property (nonatomic, strong) UIImage *photo;
 
 +(User*)currentUser;
 

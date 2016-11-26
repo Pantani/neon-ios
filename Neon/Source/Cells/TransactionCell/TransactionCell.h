@@ -13,6 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgv_photo;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_name;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_tel;
-@property (weak, nonatomic) IBOutlet UILabel *lbl_date;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_value;
 
 @end

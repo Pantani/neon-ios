@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgv_photo;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_name;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_tel;
-@property (weak, nonatomic) IBOutlet UIView *bg_value;
 @property (weak, nonatomic) IBOutlet UITextField *txt_value;
 @property (weak, nonatomic) IBOutlet UIButton *bt_send;
 

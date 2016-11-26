@@ -12,6 +12,7 @@
 #import "Constants.h"
 #import "SVProgressHUD.h"
 #import "KeyboardToolBar.h"
+#import "UIColor+Additions.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface SendView () <KeyboardToolBarDelegate,UIToolbarDelegate,UITextFieldDelegate>
@@ -65,14 +66,10 @@
         [selfLayer setMasksToBounds:YES];
         
         CALayer *txtLayer = self.txt_value.layer;
-        [txtLayer setCornerRadius:20
+        [txtLayer setCornerRadius:14
          
          ];
         [txtLayer setMasksToBounds:YES];
-        
-        CALayer *bgLayer = self.bg_value.layer;
-        [bgLayer setCornerRadius:18];
-        [bgLayer setMasksToBounds:YES];
         
         CALayer *btLayer = self.bt_send.layer;
         [btLayer setCornerRadius:25];
@@ -85,17 +82,25 @@
 
 -(void)clear
 {
-    _txt_value.text = @"";
+    _txt_value.text = @"R$ 0,00";
     _imgv_photo.image = [UIImage imageNamed:@"avatar.jpg"];
     _lbl_name.text = @"";
     _lbl_tel.text = @"";
 }
 
 -(void)sendMoney{
+    
     NSString *valueStr = [_txt_value text];
+
+    valueStr = [valueStr stringByReplacingOccurrencesOfString:@"R" withString:@""];
+    valueStr = [valueStr stringByReplacingOccurrencesOfString:@"$" withString:@""];
+    valueStr = [valueStr stringByReplacingOccurrencesOfString:@" " withString:@""];
+    valueStr = [valueStr stringByReplacingOccurrencesOfString:@"," withString:@"."];
+    
     if (valueStr==nil || valueStr.length==0 || valueStr.doubleValue<=0)
     {
-         [[[UIAlertView alloc] initWithTitle:@"Atenção" message:@"Valor inválido!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Atenção" message:@"Valor inválido!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        [_txt_value becomeFirstResponder];
         return;
     }
     
@@ -119,12 +124,12 @@
     
     _imgv_photo.image = contact.img_photo;
     CALayer *imageLayer = _imgv_photo.layer;
-    [imageLayer setCornerRadius:25];
+    [imageLayer setCornerRadius:35];
     [imageLayer setMasksToBounds:YES];
     
-    [Util circleFilledWithOutline:_imgv_photo fillColor:[UIColor clearColor] outlineColor:kColorBlue];
+    [Util circleFilledWithOutline:_imgv_photo fillColor:[UIColor clearColor] outlineColor:[UIColor neon_lineLightColor] andLineWidth:3];
     
-    _txt_value.text = @"";
+    _txt_value.text = @"R$ 0,00";
     _lbl_name.text = contact.name;
     _lbl_tel.text = contact.tel;
 }
@@ -169,6 +174,7 @@
             self.frame = CGRectMake(5, 74, screenWidth-10, self.frame.size.height);
             
         } completion:^(BOOL finished) {
+            [_txt_value becomeFirstResponder];
             _isAnimating = false;
             _isShowing = true;
         }];
@@ -181,6 +187,14 @@
 {
     [self sendMoney];
     return YES;
+}
+
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    textField.text=[textField.text stringByAppendingString:string];
+    textField.text = [Util currencyMaskWithText:textField.text andRange:range];
+    return [Util returnForShouldChangeCharactersInRange:range];
 }
 
 #pragma mark - KeyboardToolBarDelegate

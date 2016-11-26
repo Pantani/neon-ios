@@ -9,6 +9,7 @@
 #import "ContactViewController.h"
 #import <AddressBook/AddressBook.h>
 #import <QuartzCore/QuartzCore.h>
+#import "UIColor+Additions.h"
 #import "ContactCell.h"
 #import "SendView.h"
 #import "Services.h"
@@ -54,6 +55,7 @@
     [super viewWillAppear:animated];
     self.title = @"ENVIAR DINHEIRO";
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [Util drawBackgroundView:self.view];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,10 +100,10 @@
     cell.lbl_tel.text = contact.tel;
     cell.imgv_photo.image = contact.img_photo;
     CALayer *imageLayer = cell.imgv_photo.layer;
-    [imageLayer setCornerRadius:25];
+    [imageLayer setCornerRadius:cell.imgv_photo.frame.size.width/2];
     [imageLayer setMasksToBounds:YES];
     
-    [Util circleFilledWithOutline:cell.imgv_photo fillColor:[UIColor clearColor] outlineColor:kColorBlue];
+    [Util circleFilledWithOutline:cell.imgv_photo fillColor:[UIColor clearColor] outlineColor:[UIColor neon_lineLightColor] andLineWidth:3];
 
     return cell;
 }

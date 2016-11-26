@@ -16,6 +16,13 @@
 +(BOOL)verifyConnection;
 
 #pragma mark - UI Methods
-+(void) circleFilledWithOutline:(UIView*)circleView fillColor:(UIColor*)fillColor outlineColor:(UIColor*)outlinecolor;
++(void)drawBackgroundView:(UIView*)view;
++(void) circleFilledWithOutline:(UIView*)circleView fillColor:(UIColor*)fillColor outlineColor:(UIColor*)outlinecolor andLineWidth:(float)lineWidth;
++(void)circleGradientFilledWithOutline:(UIView*)circleView outlineColor:(UIColor*)outlinecolor gradientColor:(UIColor*)gradientColor;
+
+#pragma mark - Mask Methods
++(BOOL)returnForShouldChangeCharactersInRange:(NSRange)range;
++(NSString*)currencyMaskWithText:(NSString*)text andRange:(NSRange)range;
++(NSString*)formatNumber:(double)value;
 
 @end

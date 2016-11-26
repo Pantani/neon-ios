@@ -8,8 +8,7 @@
 
 #import "KeyboardToolBar.h"
 #import "Constants.h"
-
-#define kButtonColor [UIColor whiteColor]
+#import "UIColor+Additions.h"
 
 @interface KeyboardToolBar ()
 
@@ -26,10 +25,11 @@
 {
     self = [super init];
     if (self) {
-        [self setFrame:CGRectMake(0, 0, 320, 50)];
+        CGFloat width = [UIScreen mainScreen].bounds.size.width;
+        [self setFrame:CGRectMake(0, 0, width, 50)];
         self.barStyle = UIBarStyleBlackTranslucent;
-        self.backgroundColor = kColor;
-        self.barTintColor = kColor;
+        self.backgroundColor = [UIColor neon_modalColor];
+        self.barTintColor = [UIColor neon_modalColor];
         [self sizeToFit];
     }
     return self;
@@ -51,7 +51,7 @@
 {
     _fields = fields;
     UIBarButtonItem *bt_ok = [[UIBarButtonItem alloc]initWithTitle:@"Ok" style:UIBarButtonItemStyleDone target:self action:@selector(ok:)];
-    [bt_ok setTintColor:kButtonColor];
+    [bt_ok setTintColor:[UIColor neon_blueColor]];
     if (_fields.count==1) {
         self.items = [NSArray arrayWithObjects:
                       [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
@@ -59,10 +59,10 @@
     }else if (_fields.count>1) {
         
         UIBarButtonItem *bt_back = [[UIBarButtonItem alloc]initWithTitle:LString(@"preview") style:UIBarButtonItemStyleDone target:self action:@selector(previousButton:)];
-        [bt_back setTintColor:kButtonColor];
+        [bt_back setTintColor:[UIColor neon_blueColor]];
         
         UIBarButtonItem *bt_next = [[UIBarButtonItem alloc]initWithTitle:LString(@"next") style:UIBarButtonItemStyleDone target:self action:@selector(nextButton:)];
-        [bt_next setTintColor:kButtonColor];
+        [bt_next setTintColor:[UIColor neon_blueColor]];
         
         self.items = [NSArray arrayWithObjects:
                       bt_back,

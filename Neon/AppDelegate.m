@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Constants.h"
+#import "UIColor+Additions.h"
 
 @interface AppDelegate ()
 
@@ -23,19 +24,22 @@
     
     _rootViewController = [[RootViewController alloc] init];
     UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:_rootViewController];
-    _rootViewController.view.backgroundColor = kColor;
+    _rootViewController.view.backgroundColor = [UIColor neon_bgDarkColor];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = navC;
-    self.window.backgroundColor = kColor;
+    self.window.backgroundColor = [UIColor neon_bgDarkColor];
 
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
-    [[UINavigationBar appearance] setBarTintColor:kColor];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor neon_bgDarkColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
     
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-60, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+
     [self.window makeKeyAndVisible];
     
     return YES;

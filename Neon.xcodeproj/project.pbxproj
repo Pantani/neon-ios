@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352048C81DEA173200C368B6 /* img_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 352048C71DEA173200C368B6 /* img_photo@2x.png */; };
 		35364FEB1DAA94B100F7024B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35364FEA1DAA94B100F7024B /* main.m */; };
 		35364FEE1DAA94B100F7024B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35364FED1DAA94B100F7024B /* AppDelegate.m */; };
 		353650041DAA94B100F7024B /* NeonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 353650031DAA94B100F7024B /* NeonTests.m */; };
@@ -14,6 +15,12 @@
 		353651541DAAA9E700F7024B /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 353651531DAAA9E700F7024B /* avatar.jpg */; };
 		353A28561DAB722900E56760 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 353A28531DAB722900E56760 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		353A28571DAB722900E56760 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 353A28551DAB722900E56760 /* Util.m */; };
+		356507001DE90B4500146A92 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356506FA1DE90B4500146A92 /* ChartView.m */; };
+		356507011DE90B4500146A92 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356506FB1DE90B4500146A92 /* ChartView.xib */; };
+		356507021DE90B4500146A92 /* SendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356506FE1DE90B4500146A92 /* SendView.m */; };
+		356507031DE90B4500146A92 /* SendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356506FF1DE90B4500146A92 /* SendView.xib */; };
+		356507061DE9122A00146A92 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 356507051DE9122A00146A92 /* UIColor+Additions.m */; };
+		356507091DE918A700146A92 /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 356507081DE918A700146A92 /* Chart.m */; };
 		357C61111DAB10DA00668045 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 357C61101DAB10DA00668045 /* Default-568h@2x.png */; };
 		357C61141DAB11F400668045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C61131DAB11F400668045 /* UIKit.framework */; };
 		357C61161DAB128000668045 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 357C61151DAB128000668045 /* Images.xcassets */; };
@@ -36,8 +43,6 @@
 		357C61631DAB1B5700668045 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357C61491DAB1B5700668045 /* RootViewController.xib */; };
 		357C61641DAB1B5700668045 /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C614C1DAB1B5700668045 /* TransactionViewController.m */; };
 		357C61651DAB1B5700668045 /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357C614D1DAB1B5700668045 /* TransactionViewController.xib */; };
-		357C61661DAB1B5700668045 /* SendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C61501DAB1B5700668045 /* SendView.m */; };
-		357C61671DAB1B5700668045 /* SendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357C61511DAB1B5700668045 /* SendView.xib */; };
 		357C616B1DAB220400668045 /* neondb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 357C616A1DAB220400668045 /* neondb.sqlite */; };
 		357C61701DAB222200668045 /* CacheDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C616D1DAB222200668045 /* CacheDB.m */; };
 		357C61711DAB222200668045 /* DatabaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C616F1DAB222200668045 /* DatabaseHandler.m */; };
@@ -52,8 +57,6 @@
 		357C61831DAB2B5800668045 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C61821DAB2B5800668045 /* libsqlite3.0.tbd */; };
 		357C61851DAB2D7A00668045 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C61841DAB2D7A00668045 /* QuartzCore.framework */; };
 		35FD64B21DAB512A00602771 /* KeyboardToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FD64B11DAB512A00602771 /* KeyboardToolBar.m */; };
-		35FD64B41DAB58A000602771 /* bg_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FD64B31DAB58A000602771 /* bg_home@2x.png */; };
-		35FD64B61DAB59A700602771 /* img_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FD64B51DAB59A700602771 /* img_photo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -95,6 +98,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		352048C71DEA173200C368B6 /* img_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_photo@2x.png"; sourceTree = "<group>"; };
 		35364FE61DAA94B100F7024B /* Neon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35364FEA1DAA94B100F7024B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35364FEC1DAA94B100F7024B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +115,16 @@
 		353A28531DAB722900E56760 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		353A28541DAB722900E56760 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		353A28551DAB722900E56760 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		356506F91DE90B4500146A92 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
+		356506FA1DE90B4500146A92 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
+		356506FB1DE90B4500146A92 /* ChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartView.xib; sourceTree = "<group>"; };
+		356506FD1DE90B4500146A92 /* SendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendView.h; sourceTree = "<group>"; };
+		356506FE1DE90B4500146A92 /* SendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendView.m; sourceTree = "<group>"; };
+		356506FF1DE90B4500146A92 /* SendView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendView.xib; sourceTree = "<group>"; };
+		356507041DE9122A00146A92 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		356507051DE9122A00146A92 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
+		356507071DE918A700146A92 /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart.h; sourceTree = "<group>"; };
+		356507081DE918A700146A92 /* Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart.m; sourceTree = "<group>"; };
 		357C61101DAB10DA00668045 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		357C61131DAB11F400668045 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		357C61151DAB128000668045 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
@@ -146,9 +160,6 @@
 		357C614B1DAB1B5700668045 /* TransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionViewController.h; sourceTree = "<group>"; };
 		357C614C1DAB1B5700668045 /* TransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionViewController.m; sourceTree = "<group>"; };
 		357C614D1DAB1B5700668045 /* TransactionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionViewController.xib; sourceTree = "<group>"; };
-		357C614F1DAB1B5700668045 /* SendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendView.h; sourceTree = "<group>"; };
-		357C61501DAB1B5700668045 /* SendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendView.m; sourceTree = "<group>"; };
-		357C61511DAB1B5700668045 /* SendView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendView.xib; sourceTree = "<group>"; };
 		357C616A1DAB220400668045 /* neondb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = neondb.sqlite; sourceTree = "<group>"; };
 		357C616C1DAB222200668045 /* CacheDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheDB.h; sourceTree = "<group>"; };
 		357C616D1DAB222200668045 /* CacheDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheDB.m; sourceTree = "<group>"; };
@@ -166,8 +177,6 @@
 		357C61841DAB2D7A00668045 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		35FD64B01DAB512A00602771 /* KeyboardToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardToolBar.h; sourceTree = "<group>"; };
 		35FD64B11DAB512A00602771 /* KeyboardToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardToolBar.m; sourceTree = "<group>"; };
-		35FD64B31DAB58A000602771 /* bg_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_home@2x.png"; sourceTree = "<group>"; };
-		35FD64B51DAB59A700602771 /* img_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_photo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,8 +271,7 @@
 		353650201DAA9C1D00F7024B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				35FD64B51DAB59A700602771 /* img_photo@2x.png */,
-				35FD64B31DAB58A000602771 /* bg_home@2x.png */,
+				352048C71DEA173200C368B6 /* img_photo@2x.png */,
 				357C61741DAB2A5D00668045 /* anderson@2x.jpg */,
 				357C61751DAB2A5D00668045 /* bianca@2x.jpg */,
 				357C61761DAB2A5D00668045 /* derlene@2x.jpg */,
@@ -288,6 +296,26 @@
 				353A28531DAB722900E56760 /* Reachability.m */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		356506F81DE90B4500146A92 /* ChartView */ = {
+			isa = PBXGroup;
+			children = (
+				356506F91DE90B4500146A92 /* ChartView.h */,
+				356506FA1DE90B4500146A92 /* ChartView.m */,
+				356506FB1DE90B4500146A92 /* ChartView.xib */,
+			);
+			path = ChartView;
+			sourceTree = "<group>";
+		};
+		356506FC1DE90B4500146A92 /* SendView */ = {
+			isa = PBXGroup;
+			children = (
+				356506FD1DE90B4500146A92 /* SendView.h */,
+				356506FE1DE90B4500146A92 /* SendView.m */,
+				356506FF1DE90B4500146A92 /* SendView.xib */,
+			);
+			path = SendView;
 			sourceTree = "<group>";
 		};
 		357C61121DAB11F400668045 /* Frameworks */ = {
@@ -373,6 +401,8 @@
 				35FD64AF1DAB512A00602771 /* KeyboardToolBar */,
 				353A28511DAB722900E56760 /* Reachability */,
 				357C61301DAB1B5700668045 /* SVProgressHUD */,
+				356507041DE9122A00146A92 /* UIColor+Additions.h */,
+				356507051DE9122A00146A92 /* UIColor+Additions.m */,
 				353A28541DAB722900E56760 /* Util.h */,
 				353A28551DAB722900E56760 /* Util.m */,
 			);
@@ -395,6 +425,8 @@
 		357C61371DAB1B5700668045 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				356507071DE918A700146A92 /* Chart.h */,
+				356507081DE918A700146A92 /* Chart.m */,
 				357C61381DAB1B5700668045 /* Contact.h */,
 				357C61391DAB1B5700668045 /* Contact.m */,
 				357C613A1DAB1B5700668045 /* Transaction.h */,
@@ -446,9 +478,8 @@
 		357C614E1DAB1B5700668045 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				357C614F1DAB1B5700668045 /* SendView.h */,
-				357C61501DAB1B5700668045 /* SendView.m */,
-				357C61511DAB1B5700668045 /* SendView.xib */,
+				356506F81DE90B4500146A92 /* ChartView */,
+				356506FC1DE90B4500146A92 /* SendView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -576,20 +607,20 @@
 				357C61731DAB28BA00668045 /* bg_avatar@2x.png in Resources */,
 				357C615A1DAB1B5700668045 /* SVProgressHUD.bundle in Resources */,
 				357C61111DAB10DA00668045 /* Default-568h@2x.png in Resources */,
-				357C61671DAB1B5700668045 /* SendView.xib in Resources */,
 				357C617C1DAB2A5D00668045 /* bianca@2x.jpg in Resources */,
 				357C617D1DAB2A5D00668045 /* derlene@2x.jpg in Resources */,
 				357C61161DAB128000668045 /* Images.xcassets in Resources */,
 				357C61811DAB2A5D00668045 /* gerson@2x.jpg in Resources */,
-				35FD64B41DAB58A000602771 /* bg_home@2x.png in Resources */,
 				357C61801DAB2A5D00668045 /* francisca@2x.jpg in Resources */,
+				352048C81DEA173200C368B6 /* img_photo@2x.png in Resources */,
 				357C61651DAB1B5700668045 /* TransactionViewController.xib in Resources */,
 				357C61551DAB1B5700668045 /* TransactionCell.xib in Resources */,
 				357C617B1DAB2A5D00668045 /* anderson@2x.jpg in Resources */,
 				357C61181DAB140900668045 /* LaunchScreen.storyboard in Resources */,
 				357C61631DAB1B5700668045 /* RootViewController.xib in Resources */,
 				357C617F1DAB2A5D00668045 /* fabiana@2x.png in Resources */,
-				35FD64B61DAB59A700602771 /* img_photo@2x.png in Resources */,
+				356507031DE90B4500146A92 /* SendView.xib in Resources */,
+				356507011DE90B4500146A92 /* ChartView.xib in Resources */,
 				357C61611DAB1B5700668045 /* ContactViewController.xib in Resources */,
 				357C617E1DAB2A5D00668045 /* debora@2x.jpg in Resources */,
 				357C61531DAB1B5700668045 /* ContactCell.xib in Resources */,
@@ -621,18 +652,21 @@
 			files = (
 				35FD64B21DAB512A00602771 /* KeyboardToolBar.m in Sources */,
 				357C61521DAB1B5700668045 /* ContactCell.m in Sources */,
+				356507021DE90B4500146A92 /* SendView.m in Sources */,
+				356507001DE90B4500146A92 /* ChartView.m in Sources */,
 				35364FEE1DAA94B100F7024B /* AppDelegate.m in Sources */,
 				357C615C1DAB1B5700668045 /* Contact.m in Sources */,
 				357C61711DAB222200668045 /* DatabaseHandler.m in Sources */,
 				357C61571DAB1B5700668045 /* User.m in Sources */,
 				357C61591DAB1B5700668045 /* SVIndefiniteAnimatedView.m in Sources */,
 				357C61601DAB1B5700668045 /* ContactViewController.m in Sources */,
-				357C61661DAB1B5700668045 /* SendView.m in Sources */,
 				357C615B1DAB1B5700668045 /* SVProgressHUD.m in Sources */,
 				357C615D1DAB1B5700668045 /* Transaction.m in Sources */,
+				356507061DE9122A00146A92 /* UIColor+Additions.m in Sources */,
 				357C61561DAB1B5700668045 /* Services.m in Sources */,
 				357C61641DAB1B5700668045 /* TransactionViewController.m in Sources */,
 				357C61541DAB1B5700668045 /* TransactionCell.m in Sources */,
+				356507091DE918A700146A92 /* Chart.m in Sources */,
 				357C61701DAB222200668045 /* CacheDB.m in Sources */,
 				35364FEB1DAA94B100F7024B /* main.m in Sources */,
 				353A28561DAB722900E56760 /* Reachability.m in Sources */,

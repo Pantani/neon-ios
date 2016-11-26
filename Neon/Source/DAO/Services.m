@@ -47,6 +47,7 @@
                      [User currentUser].name = weakName;
                      [User currentUser].email = weakEmail;
                      [User currentUser].token = [token stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+                     [User currentUser].photo = [UIImage imageNamed:@"img_photo.png"];
                      
                      [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                          completionBlock(YES,error);

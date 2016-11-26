@@ -33,7 +33,7 @@ static NSString *const kDateFormatter = @"yyyy-MM-dd'T'HH:mm:ss.SSS";
 static NSString *const kDateFormatterCell = @"dd MMM yyyy - HH:mm";
 
 //Constants
-static int const kRowSize = 80;
+static int const kRowSize = 100;
 static NSString *const kCacheSQLPath = @"/Library/neondb.sqlite";
 
 //Localizable Strings
@@ -42,10 +42,6 @@ static NSString *const kCacheSQLPath = @"/Library/neondb.sqlite";
 //Fonts
 #define kFont(X) [UIFont fontWithName:@"Athelas" size:X]
 #define kCString(X) [NSString stringWithCString:X encoding:NSUTF8StringEncoding]
-
-//Colors
-#define kColor [UIColor colorWithRed:0/255.0 green:239/255.0 blue:174/255.0 alpha:1]
-#define kColorBlue [UIColor colorWithRed:51/255.0 green:219/255.0 blue:239/255.0 alpha:1]
 
 typedef enum {
     kPMFeedTypeInvalid = 0,
