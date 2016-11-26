@@ -95,8 +95,8 @@ static int const kHeaderSize = 182;
 
         
         // Vertical Line
-        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(x+kPhotoSize/2.0-2,
-                                                                    y, 4,
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(x+kPhotoSize/2.0-1,
+                                                                    y, 3,
                                                                     -lineHeight)];
         CAGradientLayer *gradient = [CAGradientLayer layer];
         gradient.frame = lineView.bounds;
@@ -131,7 +131,7 @@ static int const kHeaderSize = 182;
         
         
         //Label
-        UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake((kBarWidth*i)-4,
+        UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake((kBarWidth*i)-3,
                                                                  labelY,
                                                                  kBarWidth+barSpacing/2,
                                                                  kLabelHeight)];
