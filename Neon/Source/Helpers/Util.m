@@ -32,7 +32,7 @@
 +(void)drawBackgroundView:(UIView*)view
 {
     CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = view.bounds;
+    gradient.frame = [[UIScreen mainScreen] bounds];
     gradient.colors = @[(id)[UIColor neon_bgDarkColor].CGColor,
                         (id)[UIColor neon_bgLightColor].CGColor];
     gradient.locations = @[@(0.3),
@@ -64,6 +64,21 @@
     gradient.locations = @[@(0.2),
                            @(1.0)];
     [circleLayer setMask:gradient];
+    [[circleView layer] addSublayer:circleLayer];
+}
+
++(void)circleFilledWithOutline:(UIView*)circleView frame:(CGRect)frame fillColor:(UIColor*)fillColor outlineColor:(UIColor*)outlinecolor andLineWidth:(float)lineWidth
+{
+    CAShapeLayer *circleLayer = [CAShapeLayer layer];
+    float width = frame.size.width;
+    float height = frame.size.height;
+    [circleLayer setBounds:CGRectMake(2.0f, 2.0f, width-2.0f, height-2.0f)];
+    [circleLayer setPosition:CGPointMake(width/2.0, height/2.0)];
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(2.0f, 2.0f, width-2.0f, height-2.0f)];
+    [circleLayer setPath:[path CGPath]];
+    [circleLayer setFillColor:fillColor.CGColor];
+    [circleLayer setStrokeColor:outlinecolor.CGColor];
+    [circleLayer setLineWidth:lineWidth];
     [[circleView layer] addSublayer:circleLayer];
 }
 

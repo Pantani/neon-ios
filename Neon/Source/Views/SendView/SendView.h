@@ -20,5 +20,6 @@
 -(id)initWithController:(UIViewController*)controller;
 -(void)toggleBox;
 -(void)setContact:(Contact *)contact;
+-(void)imageAdjustment;
 
 @end

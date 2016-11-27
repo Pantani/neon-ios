@@ -18,6 +18,7 @@
 #pragma mark - UI Methods
 +(void)drawBackgroundView:(UIView*)view;
 +(void) circleFilledWithOutline:(UIView*)circleView fillColor:(UIColor*)fillColor outlineColor:(UIColor*)outlinecolor andLineWidth:(float)lineWidth;
++(void)circleFilledWithOutline:(UIView*)circleView frame:(CGRect)frame fillColor:(UIColor*)fillColor outlineColor:(UIColor*)outlinecolor andLineWidth:(float)lineWidth;
 +(void)circleGradientFilledWithOutline:(UIView*)circleView outlineColor:(UIColor*)outlinecolor gradientColor:(UIColor*)gradientColor;
 
 #pragma mark - Mask Methods

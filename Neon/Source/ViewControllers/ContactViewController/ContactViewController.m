@@ -41,7 +41,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     _refreshControl = [[UIRefreshControl alloc]init];
     [_table addSubview:_refreshControl];
     [_refreshControl addTarget:self action:@selector(getContacts) forControlEvents:UIControlEventValueChanged];

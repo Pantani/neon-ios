@@ -15,6 +15,8 @@
 #import "UIColor+Additions.h"
 #import <QuartzCore/QuartzCore.h>
 
+static int const kMaxHeight = 310;
+
 @interface SendView () <KeyboardToolBarDelegate,UIToolbarDelegate,UITextFieldDelegate>
 
 @property (strong, nonatomic) Contact *contact;
@@ -51,8 +53,13 @@
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
+        CGFloat screenHeight = screenRect.size.height;
         
-        self.frame = CGRectMake(5, -self.frame.size.height-self.frame.size.height, screenWidth-10, self.frame.size.height);
+        float height = screenHeight-270;
+        height = height>kMaxHeight?kMaxHeight:height;
+        
+        self.frame = CGRectMake(10, -self.frame.size.height-self.frame.size.height, screenWidth-20,height);
+        
         
         self.alphaView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         self.alphaView.backgroundColor = [UIColor blackColor];
@@ -62,28 +69,57 @@
         [controller.view bringSubviewToFront:self];
         
         CALayer *selfLayer = self.layer;
-        [selfLayer setCornerRadius:25];
+        [selfLayer setCornerRadius:15];
         [selfLayer setMasksToBounds:YES];
         
         CALayer *txtLayer = self.txt_value.layer;
-        [txtLayer setCornerRadius:14
-         
-         ];
+        [txtLayer setCornerRadius:14];
         [txtLayer setMasksToBounds:YES];
         
         CALayer *btLayer = self.bt_send.layer;
-        [btLayer setCornerRadius:25];
+        [btLayer setCornerRadius:18];
         [btLayer setMasksToBounds:YES];
+        
+        _imgv_photo.image = [UIImage imageNamed:@"avatar.jpg"];
+        [self imageAdjustment];
+        
+        if (screenHeight<=500)
+            self.imgv_photo.hidden = YES;
+        
     }
     return self;
 }
 
 #pragma mark - Private Methods
+-(void)layoutMarginsDidChange
+{
+    [super layoutMarginsDidChange];
+//    [self imageAdjustment];
+}
+
+-(void)imageAdjustment
+{
+    [self setNeedsLayout];
+    [self setNeedsDisplay];
+    
+    CGRect imgFrame = self.imgv_photo.frame;
+    imgFrame.size.width = self.imgv_photo.frame.size.height;
+    imgFrame.origin.x = self.frame.size.width/2.0 - imgFrame.size.width/2.0;
+    self.imgv_photo.frame = imgFrame;
+    
+    CALayer *imageLayer = _imgv_photo.layer;
+    [imageLayer setCornerRadius:_imgv_photo.frame.size.height/2.0];
+    [imageLayer setMasksToBounds:YES];
+    
+    [Util circleFilledWithOutline:_imgv_photo frame:imgFrame fillColor:[UIColor clearColor] outlineColor:[UIColor neon_lineLightColor] andLineWidth:3];
+    
+    [_imgv_photo setNeedsLayout];
+    [_imgv_photo setNeedsDisplay];
+}
 
 -(void)clear
 {
     _txt_value.text = @"R$ 0,00";
-    _imgv_photo.image = [UIImage imageNamed:@"avatar.jpg"];
     _lbl_name.text = @"";
     _lbl_tel.text = @"";
 }
@@ -91,7 +127,7 @@
 -(void)sendMoney{
     
     NSString *valueStr = [_txt_value text];
-
+    
     valueStr = [valueStr stringByReplacingOccurrencesOfString:@"R" withString:@""];
     valueStr = [valueStr stringByReplacingOccurrencesOfString:@"$" withString:@""];
     valueStr = [valueStr stringByReplacingOccurrencesOfString:@" " withString:@""];
@@ -100,18 +136,17 @@
     if (valueStr==nil || valueStr.length==0 || valueStr.doubleValue<=0)
     {
         [[[UIAlertView alloc] initWithTitle:@"Atenção" message:@"Valor inválido!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
-        [_txt_value becomeFirstResponder];
         return;
     }
     
     [SVProgressHUD showWithStatus:@"Enviando..."];
     [Services sendMoneyToClient:_contact.clientID value:valueStr.doubleValue withBlock:^(BOOL succeeded, NSError *error) {
-        [SVProgressHUD dismiss];
         if (error) {
+            [SVProgressHUD dismiss];
             [[[UIAlertView alloc] initWithTitle:@"Atenção" message:@"Erro. Tente novamente mais tarde!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
         }else{
-            [SVProgressHUD showSuccessWithStatus:@"Enviado!"];
             [self toggleBox];
+            [SVProgressHUD showSuccessWithStatus:@"Sucesso!"];
         }
     }];
 }
@@ -120,14 +155,9 @@
 
 -(void)setContact:(Contact *)contact
 {
+
     _contact = contact;
-    
     _imgv_photo.image = contact.img_photo;
-    CALayer *imageLayer = _imgv_photo.layer;
-    [imageLayer setCornerRadius:35];
-    [imageLayer setMasksToBounds:YES];
-    
-    [Util circleFilledWithOutline:_imgv_photo fillColor:[UIColor clearColor] outlineColor:[UIColor neon_lineLightColor] andLineWidth:3];
     
     _txt_value.text = @"R$ 0,00";
     _lbl_name.text = contact.name;
@@ -141,7 +171,8 @@
     _isAnimating = true;
     if (_isShowing) {
         [_controller.view addSubview:_alphaView];
-        
+        [self imageAdjustment];
+
         [_txt_value resignFirstResponder];
         [self endEditing:YES];
         
@@ -163,7 +194,6 @@
         _alphaView.alpha = 0;
         [_controller.view addSubview:_alphaView];
         [_controller.view bringSubviewToFront:self];
-        [_txt_value becomeFirstResponder];
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
@@ -174,7 +204,6 @@
             self.frame = CGRectMake(5, 74, screenWidth-10, self.frame.size.height);
             
         } completion:^(BOOL finished) {
-            [_txt_value becomeFirstResponder];
             _isAnimating = false;
             _isShowing = true;
         }];
@@ -201,7 +230,7 @@
 
 -(void)okDidPressed
 {
-    [self sendMoney];
+    [self endEditing:YES];
 }
 
 #pragma mark - IBAction
