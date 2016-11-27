@@ -25,7 +25,6 @@
 		357C61141DAB11F400668045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C61131DAB11F400668045 /* UIKit.framework */; };
 		357C61161DAB128000668045 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 357C61151DAB128000668045 /* Images.xcassets */; };
 		357C61181DAB140900668045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357C61171DAB140900668045 /* LaunchScreen.storyboard */; };
-		357C611A1DAB17DE00668045 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357C61191DAB17DE00668045 /* AddressBook.framework */; };
 		357C61521DAB1B5700668045 /* ContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C611F1DAB1B5700668045 /* ContactCell.m */; };
 		357C61531DAB1B5700668045 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 357C61201DAB1B5700668045 /* ContactCell.xib */; };
 		357C61541DAB1B5700668045 /* TransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C61231DAB1B5700668045 /* TransactionCell.m */; };
@@ -129,7 +128,6 @@
 		357C61131DAB11F400668045 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		357C61151DAB128000668045 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		357C61171DAB140900668045 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		357C61191DAB17DE00668045 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		357C611E1DAB1B5700668045 /* ContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCell.h; sourceTree = "<group>"; };
 		357C611F1DAB1B5700668045 /* ContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCell.m; sourceTree = "<group>"; };
 		357C61201DAB1B5700668045 /* ContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
@@ -184,9 +182,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				357C61851DAB2D7A00668045 /* QuartzCore.framework in Frameworks */,
 				357C61831DAB2B5800668045 /* libsqlite3.0.tbd in Frameworks */,
-				357C611A1DAB17DE00668045 /* AddressBook.framework in Frameworks */,
+				357C61851DAB2D7A00668045 /* QuartzCore.framework in Frameworks */,
 				357C61141DAB11F400668045 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,9 +318,8 @@
 		357C61121DAB11F400668045 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				357C61841DAB2D7A00668045 /* QuartzCore.framework */,
 				357C61821DAB2B5800668045 /* libsqlite3.0.tbd */,
-				357C61191DAB17DE00668045 /* AddressBook.framework */,
+				357C61841DAB2D7A00668045 /* QuartzCore.framework */,
 				357C61131DAB11F400668045 /* UIKit.framework */,
 			);
 			name = Frameworks;

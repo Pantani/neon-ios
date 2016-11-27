@@ -7,7 +7,6 @@
 //
 
 #import "ContactViewController.h"
-#import <AddressBook/AddressBook.h>
 #import <QuartzCore/QuartzCore.h>
 #import "UIColor+Additions.h"
 #import "ContactCell.h"

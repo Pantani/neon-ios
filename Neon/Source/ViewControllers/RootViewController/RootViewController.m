@@ -46,15 +46,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self getToken];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-    
-    [Util drawBackgroundView:self.view];
     
     _lbl_name.text = _name;
     _lbl_email.text = _email;
@@ -73,6 +64,18 @@
     CALayer *histLayer = self.bt_hist.layer;
     [histLayer setCornerRadius:25];
     [histLayer setMasksToBounds:YES];
+    
+    [self getToken];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+    [Util drawBackgroundView:self.view];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
