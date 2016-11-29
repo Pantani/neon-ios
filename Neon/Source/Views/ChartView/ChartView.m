@@ -54,7 +54,7 @@ static int const kHeaderSize = 182;
 
 -(void)draw
 {
-    CGFloat width = _dataSource.count*kBarWidth;
+    CGFloat width = _dataSource.count*kBarWidth+kBarWidth/2.0;
     CGFloat height = kHeaderSize-8;
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0,
